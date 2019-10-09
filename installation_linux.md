@@ -16,7 +16,7 @@ sudo apt install openjdk-11-jre-headless
 
 2. Créer un dossier pour l'installation de Flutter et Android Studio.
 
-```console
+```sh
 cd ~/Documents/
 mkdir FlutterSetup
 cd /FlutterSetup
@@ -26,19 +26,19 @@ tar xf ~/Téléchargements/android-studio-ide-191.5900203-linux.tar.gz
 
 3. Ajouter Flutter au PATH.
 
-```console
+```sh
 sudo nano ~/.bashrc
 ```
 
  * Ajouter la ligne suivante à la FIN du fichier et ensuite **redémarrer le PC**
 
- ```console
+ ```sh
  export PATH="~/Documents/FlutterSetup/flutter/bin:$PATH"
  ```
 
 4. Tester l'installation
 
-```console
+```sh
 flutter doctor
 ```
 
@@ -73,7 +73,7 @@ Doctor summary (to see all details, run flutter doctor -v):
 
 1. Lancer l'installateur
 
-```console
+```sh
 ~/Documents/FlutterSetup/android-studio/bin/studio.sh
 ```
 
@@ -87,7 +87,7 @@ Doctor summary (to see all details, run flutter doctor -v):
 
 6. Accepter toutes les conditions d'utilisation sans les lire
 
-```console
+```sh
 flutter doctor --android-licenses
 ```
 

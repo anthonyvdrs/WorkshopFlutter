@@ -1,4 +1,5 @@
 # FLUTTER - WORKSHOP
+![logo flutter](/img/flutter-logo.png "logo flutter")
 ***
 
 * [Anthony Vandersmissen](https://www.linkedin.com/in/anthony-vandersmissen/)

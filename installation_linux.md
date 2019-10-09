@@ -81,7 +81,7 @@ Doctor summary (to see all details, run flutter doctor -v):
 
 3. Ouvrez VsCode et installez l'extension Flutter.
 
-4. Dans VsCode, faites F1 et flutter create project.
+4. Dans VsCode, faites F1 et Flutter: New Project.
 
 5. Localisez les SDK de flutter avec l'extension (sélectionner le dossier flutter dans Documents/FlutterSetup)
 

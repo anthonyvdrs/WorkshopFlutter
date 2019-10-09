@@ -8,7 +8,7 @@
 
 1. Installer Java.
 
-```console
+```sh
 sudo apt update
 sudo apt upgrade
 sudo apt install openjdk-11-jre-headless

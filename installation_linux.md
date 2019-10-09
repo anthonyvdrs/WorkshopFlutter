@@ -9,7 +9,7 @@
 1. Installer Java.
 
 ```console
-sudo apt update 
+sudo apt update
 sudo apt upgrade
 sudo apt install openjdk-11-jre-headless
 ```
@@ -18,9 +18,10 @@ sudo apt install openjdk-11-jre-headless
 
 ```console
 cd ~/Documents/
-touch FlutterSetup
-tar xf ~/Downloads/flutter_linux_v1.9.1+hotfix.4-stable.tar.xz
-tar xf ~/Downloads/android-studio-ide-191.5900203-linux.tar.gz
+mkdir FlutterSetup
+cd /FlutterSetup
+tar xf ~/Téléchargements/flutter_linux_v1.9.1+hotfix.4-stable.tar.xz
+tar xf ~/Téléchargements/android-studio-ide-191.5900203-linux.tar.gz
 ```
 
 3. Ajouter Flutter au PATH.
@@ -29,7 +30,7 @@ tar xf ~/Downloads/android-studio-ide-191.5900203-linux.tar.gz
 sudo nano ~/.bashrc
 ```
 
- * Ajouter la ligne suivante à la FIN du fichier:
+ * Ajouter la ligne suivante à la FIN du fichier et ensuite **redémarrer le PC**
 
  ```console
  export PATH="~/Documents/FlutterSetup/flutter/bin:$PATH"
@@ -80,9 +81,18 @@ Doctor summary (to see all details, run flutter doctor -v):
 
 3. Ouvrez VsCode et installez l'extension Flutter.
 
-4. Localisez les SDK de flutter avec l'extension (sélectionner le dossier flutter dans Documents/FlutterSetup)
+4. Dans VsCode, faites F1 et flutter create project.
 
-5. Un petit 'flutter doctor' dans le terminal pour vérifier si tout fonctionne, il devrait indiquer qu'il manque le plugin Flutter et Dart dans Android Studio mais comme on travaille dans VsCode, c'est pas très grave.
+5. Localisez les SDK de flutter avec l'extension (sélectionner le dossier flutter dans Documents/FlutterSetup)
 
-6. Pour ajouter un device, il faut activer le Déboguage USB dans votre smartphone.
+6. Accepter toutes les conditions d'utilisation sans les lire
 
+```console
+flutter doctor --android-licenses
+```
+
+6. Un petit 'flutter doctor' dans le terminal pour vérifier si tout fonctionne, il devrait indiquer qu'il manque le plugin Flutter et Dart dans Android Studio mais comme on travaille dans VsCode, c'est pas très grave.
+
+7. Pour ajouter un device, il faut activer le Déboguage USB dans votre smartphone.
+
+8. N'oubliez pas de prendre un cable le jour du Workshop.

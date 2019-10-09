@@ -21,3 +21,7 @@ Flutter est la boîte à outils de l'interface utilisateur de Google permettant 
 
 ***
 
+### Étape suivante ...
+
+##### [Windows](installation_windows.md)  
+##### [Linux](installation_linux.md)

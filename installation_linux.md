@@ -30,7 +30,7 @@ tar xf ~/Téléchargements/android-studio-ide-191.5900203-linux.tar.gz
 sudo nano ~/.bashrc
 ```
 
- * Ajouter la ligne suivante à la FIN du fichier et ensuite **redémarrer le PC**
+ * Ajouter la ligne suivante à la FIN du fichier et ensuite **redémarrer le PC** Attention au chemin!
 
  ```sh
  export PATH="~/Documents/FlutterSetup/flutter/bin:$PATH"

@@ -96,3 +96,7 @@ flutter doctor --android-licenses
 7. Pour ajouter un device, il faut activer le Déboguage USB dans votre smartphone.
 
 8. N'oubliez pas de prendre un cable le jour du Workshop.
+
+#### Suite
+
+##### [CRÉER UN NOUVEAU PROJET DANS VSCODE](nouveau_projet.md)

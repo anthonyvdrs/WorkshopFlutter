@@ -74,3 +74,7 @@ flutter doctor --android-licenses
 
 8. N'oubliez pas de prendre un cable le jour du Workshop.
 
+***
+#### Suite
+
+##### [CRÉER UN NOUVEAU PROJET DANS VSCODE](nouveau_projet.md)

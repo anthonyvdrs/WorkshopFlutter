@@ -21,7 +21,11 @@
 Flutter est la boîte à outils de l'interface utilisateur de Google permettant de créer de superbes applications compilées de manière native pour mobile, Web et de bureau à partir d'une base de code unique.
 
 ***
+### Différences entre Flutter et les autres frameworks
 
+![différences entre les frameworks](./img/diffs.png)
+
+***
 ### Étape suivante ...
 
 ##### [Windows](installation_windows.md)  

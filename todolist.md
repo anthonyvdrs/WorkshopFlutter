@@ -36,18 +36,78 @@ class MyApp extends StatelessWidget {
 }
 ``` 
 
-On va donc créer ce widget stateful
+On va donc créer ce widget stateful qui servira à render la todo list
 
 ```dart
-class TodoList extends StatefulWidget {
+class TodoListScreen extends StatefulWidget {
   @override
   _TodoListState createState() => _TodoListState();
 }
 
-class _TodoListState extends State<TodoList> {
+class _TodoListStateScreenState extends State<TodoListScreen> {
   @override
   Widget build(BuildContext context) {
     return Container();
   }
 }
 ``` 
+
+Qui va retourner un widget Scaffold, ce widget sert créer une structure simple.
+
+On va y intégrer: 
+* une appbar
+* un body
+* unbouton flottant
+
+```dart
+class _TodoListStateScreenState extends State<TodoListScreen> {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Todo List')),
+      body: TodoList(
+        todos: todos,
+        onTodoToggle: _toggleTodo,
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: _addTodo,
+      ),
+    );
+  }
+}
+```
+
+Et créer les fonctions qui serviront dans le Widget.
+
+* 
+
+```dart
+class _TodoListStateScreenState extends State<TodoListScreen> {
+
+  _addTodo() async {
+    final todo = await showDialog<Todo>(
+      context: context,
+      builder: (BuildContext context) {
+        return NewTodoDialog();
+      },
+    );
+  }
+
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Todo List')),
+      body: TodoList(
+        todos: todos,
+        onTodoToggle: _toggleTodo,
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: _addTodo,
+      ),
+    );
+  }
+}
+```

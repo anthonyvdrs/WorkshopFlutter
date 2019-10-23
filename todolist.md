@@ -52,7 +52,7 @@ class _TodoListStateScreenState extends State<TodoListScreen> {
 }
 ``` 
 
-Qui va retourner un widget Scaffold, ce widget sert créer une structure simple.
+Qui va retourner un widget Scaffold, ce widget sert à créer une structure simple.
 
 On va y intégrer: 
 * une appbar

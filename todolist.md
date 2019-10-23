@@ -80,7 +80,7 @@ class _TodoListStateScreenState extends State<TodoListScreen> {
 
 Et créer les fonctions qui serviront dans le Widget.
 
-* 
+* La fonction _addTodo() va servir à ajouter des nouvelles tâches et on va empêcher l'utilisateur d'ajouter des tâches vides.
 
 ```dart
 class _TodoListStateScreenState extends State<TodoListScreen> {
@@ -92,6 +92,12 @@ class _TodoListStateScreenState extends State<TodoListScreen> {
         return NewTodoDialog();
       },
     );
+
+    if (todo != null) {
+      setState(() {
+        todos.add(todo);
+      });
+    }
   }
 
 
@@ -111,3 +117,72 @@ class _TodoListStateScreenState extends State<TodoListScreen> {
   }
 }
 ```
+* La fonction _toggleTodo() va permettre d'afficher si la checkbox est checkée ou pas
+
+```dart
+class _TodoListStateScreenState extends State<TodoListScreen> {
+
+  _addTodo() async {
+    final todo = await showDialog<Todo>(
+      context: context,
+      builder: (BuildContext context) {
+        return NewTodoDialog();
+      },
+    );
+
+    if (todo != null) {
+      setState(() {
+        todos.add(todo);
+      });
+    }
+  }
+
+  _toggleTodo(Todo todo, bool isChecked) {
+    setState(() {
+      todo.isDone = isChecked;
+    });
+  }  
+```
+
+On va maintenant ajouter un wiget "boite de dialogue" qui est appelée dans _addTodo(). 
+
+```dart
+class NewTodoDialog extends StatelessWidget {
+  final controller = new TextEditingController();
+
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog();
+  }
+}
+```
+
+Et on remplit le widget avec d'autres widget, c'est simple!
+
+```dart
+    return AlertDialog(
+      title: Text('Nouvelle Tâche'),
+      content: TextField(
+        controller: controller,
+        autofocus: true,
+      ),
+      actions: <Widget>[
+        FlatButton(
+          child: Text('Annuler'),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+        FlatButton(
+          child: Text('Ajouter'),
+          onPressed: () {
+            final todo = new Todo(title: controller.value.text);
+            controller.clear();
+
+            Navigator.of(context).pop(todo);
+          },
+        ),
+      ],
+    );
+```
+

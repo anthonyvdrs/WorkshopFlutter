@@ -47,4 +47,4 @@ class MyApp extends StatelessWidget {
 * Dézippé et collé l'intérieur du fichieé dans le dossier ```res```
  * Refaite un flutter run
 
-### Voila le worshop est terminé.
+### Voila le workshop est terminé.

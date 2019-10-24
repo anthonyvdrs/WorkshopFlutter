@@ -5,7 +5,7 @@
 ***
 Pour commencer on va retiter la barre de débug qui se trouve en haut de l'app
 
-```sh
+```dart
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
 
 Ensuite nous allons changer la couler du thème
 
-```sh
+```dart
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -35,6 +35,64 @@ class MyApp extends StatelessWidget {
   }
 }
 ```
+Maintenant nous allons centrer le titre.
+
+```dart
+ @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Todo List'),
+      centerTitle: true, // AJOUTER CECI
+      ),
+      body: TodoList(
+        todos: todos,
+        onTodoToggle: _toggleTodo,
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: _addTodo,
+      ),
+    );
+  }
+}
+
+```
+
+Nous allons rajouter une sidebar où il y aura les informations de connexions, liens vers autre page, etc...
+
+```dart
+@override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(title: Text('Todo List'),
+      ),
+      drawer: new Drawer( // AJOUTER CECI Début
+        child: ListView(
+          children: <Widget>[
+            new UserAccountsDrawerHeader(
+              accountName: new Text('nom'),
+              accountEmail: new Text('mail@becode.com'),
+              currentAccountPicture: new CircleAvatar(
+                backgroundImage: new NetworkImage('https://i.pravatar.cc/300'),
+              ),
+            )
+          ],
+        ),
+      ), // Fin
+      body: TodoList(
+        todos: todos,
+        onTodoToggle: _toggleTodo,
+      ),
+      floatingActionButton: FloatingActionButton(
+        child: Icon(Icons.add),
+        onPressed: _addTodo,
+      ),
+    );
+  }
+}
+
+```
+
 
 ***
 ##### Et pour finir nous allons changer le logo du launcher de l'application:

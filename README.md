@@ -29,6 +29,12 @@ Flutter est la boîte à outils de l'interface utilisateur de Google permettant 
 ![différences entre les frameworks](./img/diffs.png)
 
 ***
+#### Quelques liens
+
+* [flutter.dev](https://flutter.dev/)
+* [Dart Packages](https://pub.dev/)
+  
+  ***
 ### Étape suivante ...
 
 #### [Windows](installation_windows.md)  

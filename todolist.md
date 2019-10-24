@@ -1,4 +1,9 @@
-Pour commencer on va importer le package material, qui va nous permettre d'utiliser un paquet de widgets déjà construits.
+## La Todo List
+
+![todolist](./img/nothing.gif)
+***
+### Préparation
+On va commencer par importer le package material, qui va nous permettre d'utiliser un paquet de widgets déjà construits.
 
 ```dart
 import 'package:flutter/material.dart';
@@ -36,7 +41,7 @@ class MyApp extends StatelessWidget {
 }
 ``` 
 
-On va donc créer ce widget stateful qui servira à render la todo list
+On va donc créer ce widget stateful qui servira à render la partie de l'écran qui contiendra la todo list
 
 ```dart
 class TodoListScreen extends StatefulWidget {
@@ -186,3 +191,54 @@ Et on remplit le widget avec d'autres widget, c'est simple!
     );
 ```
 
+On va créer le constructeur d'objet Todo
+
+```dart
+class Todo {
+  Todo({this.title, this.isDone = false});
+
+  String title;
+  bool isDone;
+}
+```
+
+Pour finir nous allons créer la class TodoList qui contiendra nos tâches!
+
+```dart
+class TodoList extends StatelessWidget {
+  TodoList({@required this.todos, this.onTodoToggle});
+
+  final List<Todo> todos;
+  final ToggleTodoCallback onTodoToggle;
+
+  Widget _buildItem(BuildContext context, int index) {
+    final todo = todos[index];
+
+    return CheckboxListTile(
+      value: todo.isDone,
+      title: Text(todo.title),
+      onChanged: (bool isChecked) {
+        onTodoToggle(todo, isChecked);
+      },
+    );
+    
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView.builder(
+      itemBuilder: _buildItem,
+      itemCount: todos.length,
+      
+    );
+  }
+}
+```
+
+Il reste juste une fonction un peu compliquée:
+* [Voici un article pour comprendre Typedef en Dart](https://medium.com/@castellano.mariano/typedef-in-dart-40e96d3941f9)
+* Notre fonction ToggleTodoCallback va servir à render nos tâches avec en parametres la tâche en question et son état (checkée ou pas)
+
+```dart
+typedef ToggleTodoCallback = void Function(Todo, bool);
+```

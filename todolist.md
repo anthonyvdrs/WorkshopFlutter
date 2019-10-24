@@ -48,10 +48,10 @@ On va donc créer ce widget stateful qui servira à render la partie de l'écran
 ```dart
 class TodoListScreen extends StatefulWidget {
   @override
-  _TodoListState createState() => _TodoListState();
+  _TodoListScreenState createState() => _TodoListScreenState();
 }
 
-class _TodoListStateScreenState extends State<TodoListScreen> {
+class _TodoListScreenState extends State<TodoListScreen> {
   @override
   Widget build(BuildContext context) {
     return Container();

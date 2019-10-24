@@ -13,7 +13,10 @@
    * [Linux](installation_linux.md)
    * [Windows](installation_windows.md)
    * [macOS](https://flutter.dev/docs/get-started/install/macos)
-2. 
+2. [Créer un nouveau projet](./nouveau_projet.md)
+3. [La todo list](./todolist.md)
+4. [Améliorer la todolist](./upgrade.md)
+5. [Idées d'apps sympa](./example.md)
 
 ***
 ### Qu’est-ce que Flutter
@@ -28,5 +31,5 @@ Flutter est la boîte à outils de l'interface utilisateur de Google permettant 
 ***
 ### Étape suivante ...
 
-##### [Windows](installation_windows.md)  
-##### [Linux](installation_linux.md)
+#### [Windows](installation_windows.md)  
+#### [Linux](installation_linux.md)

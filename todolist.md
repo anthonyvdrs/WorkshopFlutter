@@ -247,3 +247,7 @@ Il reste juste une fonction un peu compliquée: la fonction ToggleTodoCallback, 
 ```dart
 typedef ToggleTodoCallback = void Function(Todo, bool);
 ```
+
+### Suite
+
+#### [Améliorer l'app](./upgrade.md)

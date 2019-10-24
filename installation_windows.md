@@ -77,4 +77,4 @@ flutter doctor --android-licenses
 ***
 #### Suite
 
-##### [CRÉER UN NOUVEAU PROJET DANS VSCODE](nouveau_projet.md)
+##### [Créer un nouveau projet dans VS Code](nouveau_projet.md)

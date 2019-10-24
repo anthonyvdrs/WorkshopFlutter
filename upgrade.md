@@ -106,3 +106,5 @@ Nous allons rajouter une sidebar où il y aura les informations de connexions, l
  * Refaite un flutter run
 
 ### Voila le workshop est terminé.
+
+#### [Idées d'apps](./example.md)

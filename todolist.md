@@ -52,6 +52,7 @@ class TodoListScreen extends StatefulWidget {
 }
 
 class _TodoListScreenState extends State<TodoListScreen> {
+  List<Todo> todos = [];
   @override
   Widget build(BuildContext context) {
     return Container();

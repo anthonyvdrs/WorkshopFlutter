@@ -15,7 +15,8 @@ En Flutter tous les components sont appelés "Widgets".
 ```dart
 void main() => runApp(new MyApp());
 ``` 
-
+***
+### Premier Widget
 Nous allons créer un Widget stateless qui sera le container de notre app.
 
 ```dart
@@ -40,7 +41,8 @@ class MyApp extends StatelessWidget {
     }
 }
 ``` 
-
+***
+### Widget Stateful
 On va donc créer ce widget stateful qui servira à render la partie de l'écran qui contiendra la todo list
 
 ```dart
@@ -148,6 +150,8 @@ class _TodoListStateScreenState extends State<TodoListScreen> {
     });
   }  
 ```
+***
+### Boite de dialogue
 
 On va maintenant ajouter un wiget "boite de dialogue" qui est appelée dans _addTodo(). 
 
@@ -190,7 +194,8 @@ Et on remplit le widget avec d'autres widget, c'est simple!
       ],
     );
 ```
-
+***
+###  Widget Todolist
 On va créer le constructeur d'objet Todo
 
 ```dart
@@ -202,7 +207,7 @@ class Todo {
 }
 ```
 
-Pour finir nous allons créer la class TodoList qui contiendra nos tâches!
+Et pour finir nous allons créer la class TodoList qui contiendra nos tâches!
 
 ```dart
 class TodoList extends StatelessWidget {
@@ -235,9 +240,9 @@ class TodoList extends StatelessWidget {
 }
 ```
 
-Il reste juste une fonction un peu compliquée:
+Il reste juste une fonction un peu compliquée: la fonction ToggleTodoCallback, qui va servir à render nos tâches avec en paramètres la tâche en question et son état (checkée ou pas)
 * [Voici un article pour comprendre Typedef en Dart](https://medium.com/@castellano.mariano/typedef-in-dart-40e96d3941f9)
-* Notre fonction ToggleTodoCallback va servir à render nos tâches avec en parametres la tâche en question et son état (checkée ou pas)
+
 
 ```dart
 typedef ToggleTodoCallback = void Function(Todo, bool);

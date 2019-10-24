@@ -105,4 +105,4 @@ Nous allons rajouter une sidebar où il y aura les informations de connexions, l
 * Dézippé et collé l'intérieur du fichieé dans le dossier ```res```
  * Refaite un flutter run
 
-### Voila le worshop est terminé.
+### Voila le workshop est terminé.
